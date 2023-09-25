@@ -33,14 +33,14 @@ class JoinWithCode extends StatelessWidget {
               alignment: Alignment.center,
               child: Image.network("https://user-images.githubusercontent.com/67534990/127776450-6c7a9470-d4e2-4780-ab10-143f5f86a26e.png",
               fit: BoxFit.cover,
-              height: 100,
+              height: 140,
             ),),
 
             // This widget is used to display text "Enter meeting code below"
             const Padding(
               padding: EdgeInsets.only(top: 15, bottom: 20, right: 15, left: 15),
               child: Text("Enter meeting code below",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),),
             ),
 
             // This widget is used to take input from user the code
@@ -68,12 +68,12 @@ class JoinWithCode extends StatelessWidget {
                 onPressed: (){
 
                 },
-                child: Text("Join"),
                 style: ElevatedButton.styleFrom(
                     fixedSize: const Size(100, 40),
                     backgroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))
                 ),
+                child: const Text("Join"),
               ),
             ),
           ],

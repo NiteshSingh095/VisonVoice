@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vision_voice/Screens/JoinWithCode.dart';
 
+import 'JoinMeeting.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -21,12 +23,14 @@ class HomePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 20, right: 20, left: 20, top: 30),
                 child: ElevatedButton.icon(
-                  onPressed: (){},
+                  onPressed: (){
+                    Get.to(const JoinMeeting());
+                  },
                   icon: const Icon(Icons.add),
                   label: const Text("New Meeting"),
                   style: ElevatedButton.styleFrom(
                     fixedSize: const Size(320, 40),
-                    primary: Colors.indigo,
+                    backgroundColor: Colors.indigo,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))
                   ),
                 ),
@@ -44,12 +48,12 @@ class HomePage extends StatelessWidget {
                   onPressed: (){
                     Get.to(JoinWithCode());
                   },
-                  icon: Icon(Icons.margin),
-                  label: Text("Join with a code"),
+                  icon: const Icon(Icons.margin),
+                  label: const Text("Join with a code"),
                   style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: Colors.indigo),
+                    side: const BorderSide(color: Colors.indigo),
                       foregroundColor: Colors.indigo,
-                      fixedSize: Size(320, 40),
+                      fixedSize: const Size(320, 40),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25))
                   ),
                 ),
@@ -62,9 +66,8 @@ class HomePage extends StatelessWidget {
 
               Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Container(
                   child: Image.network("https://user-images.githubusercontent.com/67534990/127524449-fa11a8eb-473a-4443-962a-07a3e41c71c0.png"),
-                ),
+
               )
             ],
           ),

@@ -3,5 +3,5 @@ import 'package:vision_voice/Screens/HomePage.dart';
 import 'package:get/get.dart';
 
 void main() {
-  runApp(GetMaterialApp(home: HomePage()));
+  runApp(const GetMaterialApp(home: HomePage()));
 }
